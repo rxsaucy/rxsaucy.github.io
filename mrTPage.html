@@ -522,6 +522,54 @@
       color: #1a1f2e !important;
     }
 
+    /* Custom Scrollbar Styling */
+    #help-content ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    #help-content ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #help-content ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+    }
+
+    #help-content ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    body.light-mode #help-content ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light-mode #help-content ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* Firefox scrollbar */
+    #help-content * {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    body.light-mode #help-content * {
+      scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+    }
+
     .google-signin-btn {
       display: flex;
       align-items: center;
@@ -721,7 +769,7 @@
 
   <main class="main-content" id="projects-content">
     <section class="iframe-section">
-      <iframe src="https://drive.google.com/embeddedfolderview?id=1eICQIoBJ84iPyQ4TpaLQdMv48AQo1F5v#grid" class="practice-iframe"></iframe>
+      <iframe src="https://drive.google.com/embeddedfolderview?id=1eICQIoBJ84iPyQ4TpaLQdMv48AQo1F5v" class="practice-iframe"></iframe>
     </section>
   </main>
 
